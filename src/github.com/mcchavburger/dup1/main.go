@@ -13,6 +13,9 @@ func main() {
 	input := bufio.NewScanner(os.Stdin)
 	for input.Scan() {
 		counts[input.Text()]++
+		if input.Text() == "Stop" {
+			break
+		}
 		//for each input we are putting the value in the counts map and using ++ to iterate up through the index
 	}
 	//Note: ignoring potential erros from input.Err()
